@@ -230,7 +230,7 @@ function Library:CreateWindow(title)
         -- slider
         function Elements:AddSlider(text, min, max, default, callback)
             local Holder = Create("Frame", {
-                Size = UDim2.new(1, -10, 10, 80),
+                Size = UDim2.new(1, -10, 0, 100), -- increased height from 80 to 100
                 BackgroundTransparency = 1,
                 Parent = TabPage
             })
@@ -246,11 +246,12 @@ function Library:CreateWindow(title)
             })
 
             local SliderBack = Create("Frame", {
-                Size = UDim2.new(1, 0, 0, 10),
-                Position = UDim2.new(0, 0, 0, 25),
+                Size = UDim2.new(1, 0, 0, 20), -- increased height from 10 to 20
+                Position = UDim2.new(0, 0, 0, 30), -- adjusted to appear under the label
                 BackgroundColor3 = Color3.fromRGB(50, 50, 50),
                 Parent = Holder
             })
+
             Create("UICorner", { CornerRadius = UDim.new(0, 4), Parent = SliderBack })
 
             local Slider = Create("Frame", {

@@ -230,7 +230,7 @@ function Library:CreateWindow(title)
 
         function Elements:AddSlider(text, min, max, default, callback)
             local Holder = Create("Frame", {
-                Size = UDim2.new(10, -10, 0, 40),
+                Size = UDim2.new(1, -10, 0, 80),
                 BackgroundTransparency = 1,
                 Parent = TabPage
             })

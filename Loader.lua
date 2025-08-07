@@ -227,10 +227,10 @@ function Library:CreateWindow(title)
             end)
             Label.MouseButton1Click:Connect(toggle)
         end
-
+        -- slider
         function Elements:AddSlider(text, min, max, default, callback)
             local Holder = Create("Frame", {
-                Size = UDim2.new(1, -10, 0, 80),
+                Size = UDim2.new(1, -10, 10, 80),
                 BackgroundTransparency = 1,
                 Parent = TabPage
             })
